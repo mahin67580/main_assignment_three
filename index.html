@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Platter</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!-- daisy -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    fontFamily: {
+                        'Sora': ['Sora']
+
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/9d39c5088c.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="font-Sora">
+    <header class="container mx-auto relative border-2 border-green-600">
+        <nav class="flex justify-between lg:justify-around items-center  px-5  gap-9 relative top-5 mb-8 ">
+            <div class="  ">
+                 <img src="c2-assets/logo-header.png" alt="">
+                 
+            </div>
+            <div>
+                <div class="navbar bg-base-100    ">
+                    <div class="dropdown   relative left-4   ">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="  h-10 w-10   " fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-35 p-2 shadow   absolute right-6">
+                            <li><a>Product</a></li>
+                            <li><a>Service</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-center hidden lg:flex    ">
+                        <ul class="menu menu-horizontal px-1 text-xl font-normal ">
+                            <li><a class="">Product</a></li>
+                            <li><a>Service</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="hidden  lg:block">
+                <div class="flex items-center  gap-5 ">
+                    <div>
+                        <i
+                            class="   text-3xl fa-solid fa-magnifying-glass flex items-center justify-center "></i>
+                    </div>
+                    <div>
+                        <i
+                            class="    text-2xl  flex items-center justify-center fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <div>
+                        <button class="btn  btn-success border-2 border-green-600 bg-white text-black">LogIn </button>
+                    </div>
+                    <div>
+                        <button class="btn  btn-neutral bg-[#179800] border-0 ">Register </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </header>
+
+
+
+
+</body>
+
+</html>
