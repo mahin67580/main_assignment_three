@@ -32,6 +32,38 @@
     </script>
     <!-- icons -->
     <script src="https://kit.fontawesome.com/9d39c5088c.js" crossorigin="anonymous"></script>
+    <!-- animation  -->
+    <style>
+        @keyframes fall {
+            0% {
+                transform: translateY(-100%);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .animate-fall {
+            position: absolute;
+            top: 0;
+            width: 50px;
+            height: 50px;
+            animation: fall 6s linear infinite;
+        }
+
+        .background-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+        }
+    </style>
 
 </head>
 
@@ -39,6 +71,8 @@
     <header class="container mx-auto relative  bg-gradient-to-b from-white to-[#EFEBE3] ">
         <nav
             class="flex justify-between lg:justify-around items-center  px-5  gap-9 relative top-5 mb-8 border-b-2 border-green-600 pb-2 lg:border-b-0 ">
+
+
             <div class="  ">
                 <img src="c2-assets/logo-header.png" alt="">
 
@@ -89,6 +123,19 @@
             </div>
         </nav>
         <!--  -->
+        <!-- animation  -->
+        <div class="  ">
+            <div class="header-animation   ">
+                <img src="c2-assets/tomato.png" alt="Fruit 1" class="animate-fall"
+                    style="left: 9%; animation-delay: 0s;">
+                <img src="c2-assets/onion.png" alt="Fruit 2" class="animate-fall" style="left: 30%; animation-delay: 2s;">
+                <img src="c2-assets/potato.png" alt="Fruit 3" class="animate-fall" style="left: 50%; animation-delay: 4s;">
+                <img src="c2-assets/tomato.png" alt="Fruit 4" class="animate-fall" style="left: 70%; animation-delay: 1s;">
+                <img src="c2-assets/onion.png" alt="Fruit 5" class="animate-fall" style="left: 83%; animation-delay: 3s;">
+            </div>
+        </div>
+
+
         <div class="flex flex-col items-center">
             <h1 class="text-3xl    lg:text-6xl   mt-16  text-center font-semibold">
                 Freshness <span class="text-[#179800]">You Can <br> Count</span>
@@ -136,16 +183,35 @@
                         class="rounded-xl" />
                 </figure>
                 <div class="card-body items-center text-center">
-                    <h2 class="card-title">Shoes!</h2>
-                    <p>healthy food gives you strength and will  power to move.  </p>
+                    <h2 class="card-title">Healthy Products </h2>
+                    <p>healthy food gives you strength and will power to move. </p>
 
                 </div>
             </div>
             <!--  -->
         </div>
+        <div class="lg:block hidden">
+            <div class="  flex justify-center p-6 mt-24 ">
+                <ul class="steps ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="lg:hidden block">
+            <div class="  flex justify-center p-6 mt-24 ">
+                <ul class="steps steps-vertical ">
+                    <li class="step step-primary">Register</li>
+                    <li class="step step-primary">Choose plan</li>
+                    <li class="step">Purchase</li>
+                    <li class="step">Receive Product</li>
+                </ul>
+            </div>
+        </div>
         <!--  -->
-
-
         <div class="bg-Secoundry mt-20 lg:mt-32">
             <h1 class="relative text-Accent text-2xl top-12 lg:top-20 px-6 lg:px-52 lg:text-4xl">
                 Popular Products
@@ -156,7 +222,7 @@
             <div class="card bg-base-100   shadow-xl     
              bg-gradient-to-b from-green-500 to-white-500    lg:w-96  ">
                 <div class="relative top-16 pl-6 ">
-                    <h2 class="card-title text-white   ">30% off</h2>
+                    <h2 class="card-title text-white relative -top-3   ">30% off</h2>
                     <p class="   ">Discover a world of fresh and <br>tasty
                         vegetables</p>
                     <div class="card-actions   ">
@@ -173,7 +239,7 @@
             <div class="  space-y-8 flex  flex-col justify-center">
                 <div class="grid  grid-cols-2 lg:grid-cols-3 gap-4">
                     <div class=" rounded-lg bg-white flex   items-center gap-3 
-                    p-3
+                    lg:p-3 pl-3
                     lg:px-6 lg:py-4">
                         <div>
                             <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
@@ -192,6 +258,61 @@
                     p-3
                     lg:px-6 lg:py-4">
                         <div>
+                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/onion.png" alt="">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
+                                <p class="text-[10px] lg:text-base">4.5</p>
+                            </div>
+                            <h1 class="text-[12.5px] lg:text-base">Onion 1KG</h1>
+                            <p class="text-[10px] lg:text-base">$59.99</p>
+                        </div>
+                    </div>
+
+
+                    <div class="hidden lg:block">
+                        <div class=" rounded-lg bg-white flex   items-center gap-3 
+                    p-3
+                    lg:px-6 lg:py-4">
+                            <div>
+                                <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/potato.png" alt="">
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-1">
+                                    <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
+                                    <p class="text-[10px] lg:text-base">4.5</p>
+                                </div>
+                                <h1 class="text-[12.5px] lg:text-base">Potato 1KG</h1>
+                                <p class="text-[10px] lg:text-base">$39.99</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="grid  grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class=" rounded-lg bg-white flex   items-center gap-3 
+                    p-3
+                    lg:px-6 lg:py-4">
+                        <div>
+                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/onion.png" alt="">
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
+                                <p class="text-[10px] lg:text-base">4.5</p>
+                            </div>
+                            <h1 class="text-[12.5px] lg:text-base">Onion 1KG</h1>
+                            <p class="text-[10px] lg:text-base">$39.99</p>
+                        </div>
+                    </div>
+
+                    <div class=" rounded-lg bg-white flex   items-center gap-3 
+                    lg:p-3 pl-3
+                    lg:px-6 lg:py-4">
+                        <div>
                             <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
                         </div>
                         <div>
@@ -199,8 +320,8 @@
                                 <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
                                 <p class="text-[10px] lg:text-base">4.5</p>
                             </div>
-                            <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
-                            <p class="text-[10px] lg:text-base">$39.99</p>
+                            <h1 class="text-[12.5px] lg:text-base">Tomato 3KG</h1>
+                            <p class="text-[10px] lg:text-base">$69.99</p>
                         </div>
                     </div>
 
@@ -217,8 +338,8 @@
                                     <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
                                     <p class="text-[10px] lg:text-base">4.5</p>
                                 </div>
-                                <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
-                                <p class="text-[10px] lg:text-base">$39.99</p>
+                                <h1 class="text-[12.5px] lg:text-base">Tomato 5KG</h1>
+                                <p class="text-[10px] lg:text-base">$99.99</p>
                             </div>
                         </div>
                     </div>
@@ -229,15 +350,15 @@
                     p-3
                     lg:px-6 lg:py-4">
                         <div>
-                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
+                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/potato.png" alt="">
                         </div>
                         <div>
                             <div class="flex items-center gap-1">
                                 <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
                                 <p class="text-[10px] lg:text-base">4.5</p>
                             </div>
-                            <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
-                            <p class="text-[10px] lg:text-base">$39.99</p>
+                            <h1 class="text-[12.5px] lg:text-base">potato 2KG</h1>
+                            <p class="text-[10px] lg:text-base">$69.99</p>
                         </div>
                     </div>
 
@@ -245,67 +366,14 @@
                     p-3
                     lg:px-6 lg:py-4">
                         <div>
-                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
+                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/onion.png" alt="">
                         </div>
                         <div>
                             <div class="flex items-center gap-1">
                                 <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
                                 <p class="text-[10px] lg:text-base">4.5</p>
                             </div>
-                            <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
-                            <p class="text-[10px] lg:text-base">$39.99</p>
-                        </div>
-                    </div>
-
-
-                    <div class="hidden lg:block">
-                        <div class=" rounded-lg bg-white flex   items-center gap-3 
-                    p-3
-                    lg:px-6 lg:py-4">
-                            <div>
-                                <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-1">
-                                    <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
-                                    <p class="text-[10px] lg:text-base">4.5</p>
-                                </div>
-                                <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
-                                <p class="text-[10px] lg:text-base">$39.99</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid  grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class=" rounded-lg bg-white flex   items-center gap-3 
-                    p-3
-                    lg:px-6 lg:py-4">
-                        <div>
-                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-1">
-                                <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
-                                <p class="text-[10px] lg:text-base">4.5</p>
-                            </div>
-                            <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
-                            <p class="text-[10px] lg:text-base">$39.99</p>
-                        </div>
-                    </div>
-
-                    <div class=" rounded-lg bg-white flex   items-center gap-3 
-                    p-3
-                    lg:px-6 lg:py-4">
-                        <div>
-                            <img class="border-2 bg-Secoundry rounded-lg " src="c2-assets/tomato.png" alt="">
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-1">
-                                <i class="fa-solid fa-star text-[10px] lg:text-base text-yellow-400"></i>
-                                <p class="text-[10px] lg:text-base">4.5</p>
-                            </div>
-                            <h1 class="text-[12.5px] lg:text-base">Tomato 1KG</h1>
+                            <h1 class="text-[12.5px] lg:text-base">Onion 1KG</h1>
                             <p class="text-[10px] lg:text-base">$39.99</p>
                         </div>
                     </div>
@@ -336,11 +404,11 @@
         <h1 class="text-Accent text-2xl lg:text-4xl pl-6 lg:pl-32 mt-6 lg:mb-6 lg:mt-32 ">Arrival & Offers</h1>
 
         <div class="flex flex-col lg:flex-row justify-center gap-5 p-5  ">
-            <div class="flex lg:gap-10   border-2 border-green-600 bg-[#115414] rounded-xl pr-0  p-6">
+            <div class="flex lg:gap-10     bg-[#115414] rounded-xl pr-0  p-6">
                 <div class="lg:space-y-8 space-y-2 lg:mt-10">
                     <img src="c2-assets/dawat-logo.png" alt="">
                     <button class="btn lg:text-2xl text-sm   w-44 lg:w-72 ">Cook Exotic Dishes</button>
-                    <p class=" lg:text-4xl text-xl text-white">UP to <span>20% OFF</span></p>
+                    <p class=" lg:text-4xl text-xl text-white">UP to <span class="font-extrabold">20% OFF</span></p>
                 </div>
                 <div class="  flex   ">
                     <img class=" " src="c2-assets/dawat-mock-up.png" alt="">
@@ -348,11 +416,11 @@
             </div>
             <!--  -->
 
-            <div class="flex lg:gap-10 gap-11  border-2 border-green-600 bg-[#102861] rounded-xl   p-6">
-                <div class="lg:space-y-6 space-y-2 lg:mt-1">
+            <div class="flex lg:gap-10 gap-11   bg-[#102861] rounded-xl   p-6">
+                <div class="lg:space-y-7 space-y-2 lg:mt-1">
                     <img class="w-16 h-[70px] lg:w-[93px] lg:h-[127px]" src="c2-assets/india-gate-logo.png" alt="">
                     <button class="btn lg:text-2xl text-sm   w-44 lg:w-72 ">Cook Exotic Dishes</button>
-                    <p class=" lg:text-4xl text-xl text-white">UP to <span>20% OFF</span></p>
+                    <p class=" lg:text-4xl text-xl text-white">UP to <span class="font-extrabold">20% OFF</span></p>
                 </div>
                 <div class="  flex     ">
                     <img class="  " src="c2-assets/india-gate-mock-up.png" alt="">
@@ -360,23 +428,37 @@
             </div>
         </div>
     </main>
+    <footer class="container mx-auto  relative -mt-60  lg:-mt-24 ">
 
+        <div class="  flex justify-center p-4">
+            <div
+                class="  relative top-72 lg:top-56 z-20 rounded-lg bg-Secoundry flex flex-col lg:flex-row items-center  lg:w-10/12 lg:justify-center ">
+                <div class="  p-5 pb-0 lg:p-10 ">
+                    <img src="c2-assets/vegetable-busket.png" alt="">
+                </div>
+                <div class="  text-center lg:text-left p-4 lg:space-y-6">
+                    <h1 class="text-2xl font-bold text-Accent lg:text-4xl lg:text-black ">Get Grocery News!</h1>
+                    <p class="mt-4 lg:text-xl ">Exclusive training tips, ticks, product deals and more.</p>
+                    <input type="text" placeholder="Enter Email..." class=" mt-4 input 
+                    lg:w-[472px] lg:h-[67px]   input-bordered w-full  " /> <br>
+                    <button class="btn mt-4 bg-Accent text-white px-7 ">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <footer class="footer relative  bg-base-300 text-base-content p-10 bg-Accent text-white">
+            <nav class="mt-72 lg:pl-24">
+                <img src="c2-assets/logo-footer.png" alt="">
+                <p class="lg:w-[426px]">Discover worlds best and tasty vegetables and stay healthy live longer.</p>
 
-    <footer class="container mx-auto mt-56 ">
-        <footer class="footer bg-base-300 text-base-content p-10 bg-Accent text-white">
-            <nav class="mt-40">
-                 <img src="c2-assets/logo-footer.png" alt="">
-                 <p class="lg:w-[426px]">Discover worlds best and tasty vegetables and  stay healthy live longer.</p>
-                
             </nav>
-            <nav class="lg:mt-40 space-y-5">
-                <h6 class="footer-title">Product</h6>
+            <nav class="lg:mt-72 space-y-5">
+                <a class="link link-hover">Product</a>
                 <a class="link link-hover">Services</a>
                 <a class="link link-hover">Contact Us</a>
-            
+
             </nav>
-            <nav class="lg:mt-40">
-                <h6 class="footer-title">Follow Us</h6>
+            <nav class="lg:mt-72">
+                <h6 class="link link-hover">Follow Us</h6>
                 <div class="grid grid-flow-col gap-4">
                     <a>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -403,17 +485,17 @@
                         </svg>
                     </a>
                     <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current">
-                          <path d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.122.25 2.616.416a5.405 5.405 0 011.902 1.26 5.405 5.405 0 011.26 1.902c.166.494.358 1.357.416 2.616.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.25 2.122-.416 2.616a5.405 5.405 0 01-1.26 1.902 5.405 5.405 0 01-1.902 1.26c-.494.166-1.357.358-2.616.416-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.122-.25-2.616-.416a5.405 5.405 0 01-1.902-1.26 5.405 5.405 0 01-1.26-1.902c-.166-.494-.358-1.357-.416-2.616-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.25-2.122.416-2.616a5.405 5.405 0 011.26-1.902 5.405 5.405 0 011.902-1.26c.494-.166 1.357-.358 2.616-.416C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.737 0 8.332.013 7.052.071 5.773.129 4.796.311 4.02.63a7.405 7.405 0 00-2.776 1.838A7.405 7.405 0 00.63 5.244c-.319.776-.501 1.753-.559 3.032C.013 8.663 0 9.067 0 12s.013 3.337.071 4.616c.058 1.279.24 2.256.559 3.032a7.405 7.405 0 001.838 2.776 7.405 7.405 0 002.776 1.838c.776.319 1.753.501 3.032.559C8.663 23.987 9.067 24 12 24s3.337-.013 4.616-.071c1.279-.058 2.256-.24 3.032-.559a7.405 7.405 0 002.776-1.838 7.405 7.405 0 001.838-2.776c.319-.776.501-1.753.559-3.032C23.987 15.337 24 14.933 24 12s-.013-3.337-.071-4.616c-.058-1.279-.24-2.256-.559-3.032a7.405 7.405 0 00-1.838-2.776A7.405 7.405 0 0019.352.63c-.776-.319-1.753-.501-3.032-.559C15.337.013 14.933 0 12 0zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            class="fill-current">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.849.07 1.259.058 2.122.25 2.616.416a5.405 5.405 0 011.902 1.26 5.405 5.405 0 011.26 1.902c.166.494.358 1.357.416 2.616.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.058 1.259-.25 2.122-.416 2.616a5.405 5.405 0 01-1.26 1.902 5.405 5.405 0 01-1.902 1.26c-.494.166-1.357.358-2.616.416-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.259-.058-2.122-.25-2.616-.416a5.405 5.405 0 01-1.902-1.26 5.405 5.405 0 01-1.26-1.902c-.166-.494-.358-1.357-.416-2.616-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.058-1.259.25-2.122.416-2.616a5.405 5.405 0 011.26-1.902 5.405 5.405 0 011.902-1.26c.494-.166 1.357-.358 2.616-.416C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.737 0 8.332.013 7.052.071 5.773.129 4.796.311 4.02.63a7.405 7.405 0 00-2.776 1.838A7.405 7.405 0 00.63 5.244c-.319.776-.501 1.753-.559 3.032C.013 8.663 0 9.067 0 12s.013 3.337.071 4.616c.058 1.279.24 2.256.559 3.032a7.405 7.405 0 001.838 2.776 7.405 7.405 0 002.776 1.838c.776.319 1.753.501 3.032.559C8.663 23.987 9.067 24 12 24s3.337-.013 4.616-.071c1.279-.058 2.256-.24 3.032-.559a7.405 7.405 0 002.776-1.838 7.405 7.405 0 001.838-2.776c.319-.776.501-1.753.559-3.032C23.987 15.337 24 14.933 24 12s-.013-3.337-.071-4.616c-.058-1.279-.24-2.256-.559-3.032a7.405 7.405 0 00-1.838-2.776A7.405 7.405 0 0019.352.63c-.776-.319-1.753-.501-3.032-.559C15.337.013 14.933 0 12 0zM12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z" />
                         </svg>
-                      </a>
-                      
+                    </a>
+
                 </div>
             </nav>
         </footer>
     </footer>
-
-
 </body>
 
 </html>
